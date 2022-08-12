@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator and Validator</title>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Comfortaa">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="LinksStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="image/png" rel=" icon" href="gold-key.png">
+
+    <!-- Scripts -->
+    <script defer src="passwordGenerator.js"></script>
+    <script defer src="passwordValidator.js"></script>
+    <script defer src="linksToSocial.js"></script>
+
+</head>
+
+<body>
+    <!-- Passowrd Generator -->
+    <div class="container">
+        <h2>Password Generator</h2>
+        <div class="result-container">
+            <span id="result"></span>
+            <button class="btn" id="clipboard">
+                <i class="fa fa-clipboard" aria-hidden="true"></i>
+            </button>
+        </div>
+        <form onchange="return thePasswordBaby()">
+            <div class="settings">
+                <div class="setting">
+                    <label>Password length</label>
+                    <input type="range" id="length" min='4' max='33' value='33' />
+                    <p> <span id="rangeValue"></span></p>
+                </div>
+                <div class="setting">
+                    <label>Include uppercase letters</label>
+                    <input type="checkbox" id="uppercase" checked />
+                </div>
+                <div class="setting">
+                    <label>Include lowercase letters</label>
+                    <input type="checkbox" id="lowercase" checked />
+                </div>
+                <div class="setting">
+                    <label>Include numbers</label>
+                    <input type="checkbox" id="numbers" checked />
+                </div>
+                <div class="setting">
+                    <label>Include symbols</label>
+                    <input type="checkbox" id="symbols" checked />
+                </div>
+            </div>
+        </form>
+        <button class="btn btn-large" id="generate">
+            Generate password
+        </button>
+        <button class="btn btn-large" id="clear">
+            Clear
+        </button>
+        <button class="btn btn-large" id="paste-to-test">
+            Paste to test
+        </button>
+    </div>
+
+    <!-- Password Validator -->
+    <div class="container-validator">
+        <div class="validator-form">
+            <div class="validator-element">
+                <input type="password" id="passwordText">
+                <div class="toggle-password">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                </div>
+                <div class="password-rules">
+                    <div class="rule-lenght">
+                        <p>Include 7 Characters </p>
+                    </div>
+                    <div class="rule-number">
+                        <p>Include a Number </p>
+                    </div>
+                    <div class="rule-uppercase">
+                        <p>Include a Uppercase letter </p>
+                    </div>
+                    <div class="rule-symbol">
+                        <p>Include a Symbol </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link Section -->
+    <div class="social-panel-container">
+        <div class="social-panel">
+            <p>Looking forward to work with <i class="fa fa-heart" aria-hidden="true"></i><br>
+                <a target="_blank" href="https://github.com/PinkFlamingoz">Hristijan Stavrov</a>
+            </p>
+            <button class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <h4>You found me</h4>
+            <ul>
+                <li>
+                    <a href="https://github.com/PinkFlamingoz" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/PinkFlamingoz" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/PinkFlamingoz" target="_blank">
+                        <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button class="floating-btn">
+        Find Me
+    </button>
+</body>
+
+</html>
