@@ -1,15 +1,11 @@
-(function () {
-	const elements = {
-		floatingBtn: document.querySelector('.floating-btn'),
-		closeBtn: document.querySelector('.close-btn'),
-		socialPanelContainer: document.querySelector('.social-panel-container'),
-	};
+const floating_btn = document.querySelector('.floating-btn');
+const close_btn = document.querySelector('.close-btn');
+const social_panel_container = document.querySelector('.social-panel-container');
 
-	elements.floatingBtn.addEventListener('click', () => {
-		elements.socialPanelContainer.classList.toggle('visible');
-	});
+floating_btn.addEventListener('click', () => {
+	social_panel_container.classList.toggle('visible');
+});
 
-	elements.closeBtn.addEventListener('click', () => {
-		elements.socialPanelContainer.classList.remove('visible');
-	});
-})();
+close_btn.addEventListener('click', () => {
+	social_panel_container.classList.remove('visible');
+});

@@ -2,188 +2,126 @@
 <html lang="en">
 
 <head>
-	<!-- Charset -->
 	<meta charset="UTF-8">
-
-	<!-- Viewport and Edge compatibility -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-	<!-- Schema.org JSON-LD -->
-	<script type="application/ld+json">
-    {
-        "@context": "https://schema.org/",
-        "@type": "SoftwareApplication",
-        "name": "Password Generator and Validator",
-        "description": "A simple tool to generate and validate passwords.",
-        "applicationCategory": "SecuritySoftware",
-        "operatingSystem": "All"
-    }
-    </script>
-
-	<!-- SEO Improvements -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Password Generator and Validator</title>
-	<meta name="description" content="A simple tool to generate and validate passwords.">
-	<meta name="keywords" content="password, generator, validator">
-	<meta name="author" content="Hristijan Stavrov">
-	<link rel="canonical" href="YOUR_FULL_PAGE_URL_HERE"> <!-- replace with your page's canonical URL -->
-
-	<!-- For sharing on Social Platforms -->
-	<meta property="og:title" content="Password Generator and Validator">
-	<meta property="og:description" content="A simple tool to generate and validate passwords.">
-	<meta property="og:image" content="/gold-key.png">
-	<meta name="twitter:card" content="/gold-key.png">
-
-	<!-- Favicon and Theme Color -->
-	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-	<link rel="manifest" href="/favicon/manifest.json">
-	<meta name="msapplication-TileColor" content="#FA8719">
-	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#FA8719">
-
-	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Comfortaa">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="LinksStyle.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
-	<link rel="stylesheet" href="/style.css">
-	<link rel="stylesheet" href="/LinksStyle.css">
+	<link type="image/png" rel=" icon" href="gold-key.png">
 
 	<!-- Scripts -->
-	<script defer src="/passwordGenerator.js"></script>
-	<script defer src="/passwordValidator.js"></script>
-	<script defer src="/linksToSocial.js"></script>
+	<script defer src="passwordGenerator.js"></script>
+	<script defer src="passwordValidator.js"></script>
+	<script defer src="linksToSocial.js"></script>
+
 </head>
 
 <body>
-	<!-- Main Content -->
-	<main id="main_content">
-		<!-- Password Generator -->
-		<section class="password-generator-container" id="main_content" aria-label="Password Generator" role="region">
-			<h2>Password Generator</h2>
-
-			<div class="result-container">
-				<span id="result" role="textbox" aria-readonly="true"></span>
-				<button class="btn" id="clipboard" aria-label="Copy password to Clipboard" aria-pressed="false" role="button">
-					<i class="fa fa-clipboard" aria-hidden="true"></i>
-				</button>
+	<!-- Passowrd Generator -->
+	<div class="container">
+		<h2>Password Generator</h2>
+		<div class="result-container">
+			<span id="result"></span>
+			<button class="btn" id="clipboard">
+				<i class="fa fa-clipboard" aria-hidden="true"></i>
+			</button>
+		</div>
+		<form onchange="return thePasswordBaby()">
+			<div class="settings">
+				<div class="setting">
+					<label>Password length</label>
+					<input type="range" id="length" min='4' max='33' value='33' />
+					<p> <span id="rangeValue"></span></p>
+				</div>
+				<div class="setting">
+					<label>Include uppercase letters</label>
+					<input type="checkbox" id="uppercase" checked />
+				</div>
+				<div class="setting">
+					<label>Include lowercase letters</label>
+					<input type="checkbox" id="lowercase" checked />
+				</div>
+				<div class="setting">
+					<label>Include numbers</label>
+					<input type="checkbox" id="numbers" checked />
+				</div>
+				<div class="setting">
+					<label>Include symbols</label>
+					<input type="checkbox" id="symbols" checked />
+				</div>
 			</div>
+		</form>
+		<button class="btn btn-large" id="generate">
+			Generate password
+		</button>
+		<button class="btn btn-large" id="clear">
+			Clear
+		</button>
+		<button class="btn btn-large" id="paste-to-test">
+			Paste to test
+		</button>
+	</div>
 
-			<form id="password_settings_form">
-				<fieldset class="settings">
-					<legend>Password Settings</legend>
-					<p class="error" id="error-message"></p>
-					<div class="setting">
-						<label for="length">Password length</label>
-						<input type="range" id="length" min="4" max="33" value="33" aria-valuemin="4" aria-valuemax="33" aria-valuenow="33" />
-						<p><span id="ranged_value">33</span> characters</p>
-					</div>
-
-					<div class="setting">
-						<label for="uppercase">Include uppercase letters</label>
-						<input type="checkbox" id="uppercase" checked aria-checked="true" />
-					</div>
-
-					<div class="setting">
-						<label for="lowercase">Include lowercase letters</label>
-						<input type="checkbox" id="lowercase" checked aria-checked="true" />
-					</div>
-
-					<div class="setting">
-						<label for="numbers">Include numbers</label>
-						<input type="checkbox" id="numbers" checked aria-checked="true" />
-					</div>
-
-					<div class="setting">
-						<label for="symbols">Include symbols</label>
-						<input type="checkbox" id="symbols" checked aria-checked="true" />
-					</div>
-
-					<button type="button" class="btn btn-large" id="generate">Generate password</button>
-
-					<button type="reset" class="btn btn-large" id="clear">Clear</button>
-				</fieldset>
-			</form>
-
-			<button class="btn btn-large" id="paste-to-test" role="button">Paste to test</button>
-		</section>
-
-
-		<!-- Password Validator -->
-		<section class="password-validator-container" aria-label="Password Validator" role="region">
+	<!-- Password Validator -->
+	<div class="container-validator">
+		<div class="validator-form">
 			<div class="validator-element">
-				<label for="password_text" id="password_label" class="sr-only">Enter your password</label>
-
-				<!-- sr-only is a common class name for visually hiding elements but keeping them accessible to screen readers -->
-				<input type="password" id="password_text" aria-labelledby="password_label" aria-describedby="password_rules" />
-
-				<button class="toggle-password" aria-label="Toggle Password Visibility">
+				<input type="password" id="passwordText">
+				<div class="toggle-password">
 					<i class="fa fa-eye" aria-hidden="true"></i>
-					<!-- <i class="fa fa-eye-slash" aria-hidden="true"></i> --> <!-- Hide this initially and toggle it with JS as needed -->
-				</button>
-
-				<fieldset class="password-rules" id="password_rules">
-					<legend>Password Validation Rules</legend>
-
-					<div class="rule-length">
-						<p>Include 7 Characters</p>
+					<i class="fa fa-eye-slash" aria-hidden="true"></i>
+				</div>
+				<div class="password-rules">
+					<div class="rule-lenght">
+						<p>Include 7 Characters </p>
 					</div>
-
 					<div class="rule-number">
-						<p>Include a Number</p>
+						<p>Include a Number </p>
 					</div>
-
 					<div class="rule-uppercase">
-						<p>Include an Uppercase letter</p>
+						<p>Include a Uppercase letter </p>
 					</div>
-
 					<div class="rule-symbol">
-						<p>Include a Symbol</p>
+						<p>Include a Symbol </p>
 					</div>
-				</fieldset>
+				</div>
 			</div>
-		</section>
-	</main>
+		</div>
+	</div>
 
-	<footer>
-		<section class="social-panel-container" aria-label="Contact and Social Links">
-			<div class="social-panel">
-				<h4>Contact Hristijan Stavrov</h4>
-
-				<p>
-					Looking forward to working with <i class="fa fa-heart" aria-hidden="true"></i><br />
-					<a href="https://github.com/PinkFlamingoz" target="_blank" rel="noopener noreferrer">Hristijan Stavrov</a>
-				</p>
-
-				<nav>
-					<ul>
-						<li>
-							<a href="https://github.com/PinkFlamingoz" target="_blank" rel="noopener noreferrer" aria-label="Hristijan Stavrov on GitHub">
-								<i class="fa fa-github" aria-hidden="true"></i>
-							</a>
-						</li>
-					</ul>
-				</nav>
-
-				<button class="close-btn" aria-label="Close social panel">
-					<i class="fa fa-times" aria-hidden="true"></i>
-				</button>
-			</div>
-
-			<button class="floating-btn" aria-label="Toggle social panel visibility">Find Me</button>
-		</section>
-	</footer>
-
+	<!-- Link Section -->
+	<div class="social-panel-container">
+		<div class="social-panel">
+			<p>Looking forward to work with <i class="fa fa-heart" aria-hidden="true"></i><br>
+				<a target="_blank" href="https://github.com/PinkFlamingoz">Hristijan Stavrov</a>
+			</p>
+			<button class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></button>
+			<h4>You found me</h4>
+			<ul>
+				<li>
+					<a href="https://github.com/PinkFlamingoz" target="_blank">
+						<i class="fa fa-github" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/PinkFlamingoz" target="_blank">
+						<i class="fa fa-github" aria-hidden="true"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/PinkFlamingoz" target="_blank">
+						<i class="fa fa-github" aria-hidden="true"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<button class="floating-btn">
+		Find Me
+	</button>
 </body>
 
 </html>

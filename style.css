@@ -5,7 +5,7 @@
 }
 
 body {
-	background-color: #FF9633;
+	background-color: #ff9633;
 	color: #f5f5f5;
 	display: flex;
 	font-family: 'Comfortaa', display;
@@ -25,12 +25,12 @@ h2 {
 	text-align: center;
 }
 
-input[type=checkbox] {
+input[type='checkbox'] {
 	margin-right: 0;
 }
 
 .container {
-	background-color: #FA8719;
+	background-color: #fa8719;
 	box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
 	padding: 20px;
 	width: 350px;
@@ -52,7 +52,7 @@ input[type=checkbox] {
 }
 
 .result-container #result {
-  	word-wrap: break-word;
+	word-wrap: break-word;
 	max-width: calc(100% - 40px);
 }
 
@@ -72,7 +72,7 @@ input[type=checkbox] {
 	font-family: 'Comfortaa', display;
 	font-size: 16px;
 	padding: 8px 12px;
-	background-color: #FF9633;
+	background-color: #ff9633;
 }
 
 .btn-large {
@@ -83,7 +83,7 @@ input[type=checkbox] {
 
 .btn:hover {
 	background-color: #f5f5f5;
-	color: #AD5909;
+	color: #ad5909;
 }
 
 .setting {
@@ -100,22 +100,21 @@ input[type=checkbox] {
 }
 
 /* Password Validator CSS */
-.container-validator{
+.container-validator {
 	position: relative;
 	top: 50px;
 }
 
-.validator-form{
+.validator-form {
 	width: 300px;
 }
 
-.validator-form .validator-element{
+.validator-form .validator-element {
 	position: relative;
 	right: 12px;
-
 }
 
-.validator-form .validator-element input{
+.validator-form .validator-element input {
 	min-width: 300px;
 	padding: 10px;
 	font-size: 18px;
@@ -128,12 +127,12 @@ input[type=checkbox] {
 	letter-spacing: 1px;
 }
 
-.validator-form .validator-element .toggle-password{
+.validator-form .validator-element .toggle-password {
 	position: absolute;
 	width: 40px;
 	height: 40px;
-	color:#f5f5f5;
-	top:2px;
+	color: #f5f5f5;
+	top: 2px;
 	right: -40px;
 	border-radius: 50%;
 	text-align: center;
@@ -142,19 +141,19 @@ input[type=checkbox] {
 	cursor: pointer;
 }
 
-.validator-form .validator-element .toggle-password.active i.fa-eye{
+.validator-form .validator-element .toggle-password.active i.fa-eye {
 	display: none;
 }
 
-.validator-form .validator-element .toggle-password.active i.fa-eye-slash{
+.validator-form .validator-element .toggle-password.active i.fa-eye-slash {
 	display: inline;
 }
 
-.validator-form .validator-element .toggle-password i.fa-eye-slash{
+.validator-form .validator-element .toggle-password i.fa-eye-slash {
 	display: none;
 }
 
-.validator-form .validator-element .password-rules{
+.validator-form .validator-element .password-rules {
 	position: relative;
 	top: 0px;
 	left: 50px;
@@ -172,18 +171,18 @@ input[type=checkbox] {
 	transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
 }
 
-.validator-form .validator-element .password-rules.active{
+.validator-form .validator-element .password-rules.active {
 	opacity: 1;
 	padding: 10px;
 	height: 165px;
 }
 
-.validator-form .validator-element .password-rules > div{
+.validator-form .validator-element .password-rules > div {
 	margin: 15px 10px;
 	font-weight: 600;
-	color:red;
+	color: red;
 }
 
-.validator-form .validator-element .password-rules > div.active{
-	color:green;
+.validator-form .validator-element .password-rules > div.active {
+	color: green;
 }
