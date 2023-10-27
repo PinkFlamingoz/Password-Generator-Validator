@@ -1,0 +1,22 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--main-bg-color);
+	color: var(--main-text-color);
+	font-family: var(--comfortaa-font);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	padding: 10px;
+}
+
+h1 {
+	margin: 10px 0 20px;
+	text-align: center;
+}

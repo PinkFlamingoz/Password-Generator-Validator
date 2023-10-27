@@ -1,0 +1,68 @@
+:root {
+	--comfortaa-font: 'Comfortaa', cursive;
+	--main-bg-color: #ff9633;
+	--secondary-bg-color: #fa8719;
+	--main-text-color: #f5f5f5;
+	--input-bg-color: #f5f5f5;
+	--primary-border-color: #dce1f2;
+	--secondary-text-color: #97a5ce;
+	--highlight-color: #fa8719;
+	--border-highlight-color: #ff6a00;
+	--dark-border-color: #0174ff;
+	--light-shadow: 0 16px 22px -17px #257be6;
+	--panel-bg-color: #f5f5f5;
+	--border-color: #888;
+	--error-color: red;
+	--validator-text-color: black;
+	--success-color: green;
+	--toggle-icon-color: #f5f5f5;
+	--hover-bg-color: var(--main-text-color);
+	--hover-text-color: #ad5909;
+	--dark-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+	--dark-shadow-links: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
+	--result-container-bg-color: rgba(0, 0, 0, 0.4);
+	--links-box-shadow-hover: 0 11px 12px 0 var(--border-highlight-color);
+	--rainbow-gradient: linear-gradient(98deg, #ff0000, #ff7f00, #ffff00, #7fff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+	--rainbow-background-size: 500% 500%;
+	--rainbow-animation: rainbow-animation 0.3s linear infinite;
+	--border-radius: 10px;
+	--border-radius-large: 16px;
+	--border-radius-small: 5px;
+	--border-radius-circle: 50%;
+	--transition-speed: 0.3s;
+	--button-font-size: 0.77rem;
+	--button-font-size-large: 1rem;
+	--result-container-font-size: 1rem;
+	--result-container-font-size-large: 1.5rem;
+	--result-container-copy-button-font-size: 0.9rem;
+	--result-container-copy-button-font-size-large: 1rem;
+	--password-settings-legend-font-size: 1.2rem;
+	--password-settings-legend-font-size-large: 1.33rem;
+	--password-setting-font-size: 0.77rem;
+	--password-setting-font-size-large: 1rem;
+	--validator-input-font-size: 0.77rem;
+	--validator-input-font-size-large: 1rem;
+	--validator-toggle-icon-font-size: 1rem;
+	--validator-toggle-icon-font-size-large: 1.2rem;
+	--validator-rules-font-size: 0.88rem;
+	--validator-rules-font-size-large: 0.9rem;
+	--links-close-button-font-size: 1.3rem;
+	--links-p-font-size: 0.89rem;
+	--links-a-font-size: 2rem;
+	--links-button-font-size: 1rem;
+}
+
+@keyframes rainbow-animation {
+	0% {
+		background-size: var(--rainbow-background-size);
+		background-position: 0% 50%;
+	}
+	50% {
+		background-size: var(--rainbow-background-size);
+		background-position: 100% 50%;
+	}
+	100% {
+		background-size: var(--rainbow-background-size);
+		background-position: 0% 50%;
+	}
+}

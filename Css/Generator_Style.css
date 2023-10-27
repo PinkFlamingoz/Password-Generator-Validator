@@ -1,0 +1,110 @@
+.main-container {
+	background-color: var(--main-bg-color);
+	border-radius: var(--border-radius);
+	box-shadow: none;
+	padding: 20px;
+	width: 500px;
+	max-width: 100%;
+	min-width: 370px;
+	box-shadow: none;
+	transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+	transform: translateY(0);
+}
+
+.main-container:hover {
+	box-shadow: var(--dark-shadow);
+	background-color: var(--secondary-bg-color);
+	transform: scale(1.02) translateY(-30px);
+}
+
+.result-container {
+	background-color: var(--result-container-bg-color);
+	border-radius: var(--border-radius);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 10px;
+	width: 100%;
+	overflow: hidden;
+	font-size: var(--result-container-font-size);
+}
+
+.result-container #result {
+	max-width: calc(100% - 50px);
+	overflow-wrap: break-word;
+	overflow: auto;
+	white-space: normal;
+}
+
+.result-container .button {
+	font-size: var(--result-container-copy-button-font-size);
+	height: 40px;
+	width: 40px;
+	padding: 0;
+}
+
+#password_settings_form fieldset {
+	border: 2px solid var(--main-bg-color);
+	border-radius: var(--border-radius);
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#password_settings_form fieldset legend {
+	padding: 20px 10px;
+	font-size: var(--password-settings-legend-font-size);
+	color: var(--main-text-color);
+}
+
+input[type='range'] {
+	margin: 0 5px 0 5px;
+}
+
+.button {
+	background-color: var(--main-bg-color);
+	border: none;
+	border-radius: var(--border-radius);
+	color: var(--main-text-color);
+	cursor: pointer;
+	font-family: var(--comfortaa-font);
+	font-size: var(--button-font-size);
+	padding: 10px 20px;
+	transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+.button:hover {
+	background-color: var(--hover-bg-color);
+	color: var(--hover-text-color);
+}
+
+.button-large {
+	width: 100%;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.setting {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	font-size: var(--password-setting-font-size);
+}
+
+@media screen and (min-width: 600px) {
+	.result-container {
+		font-size: var(--result-container-font-size-large);
+	}
+	.result-container .button {
+		font-size: var(--result-container-copy-button-font-size-large);
+	}
+	#password_settings_form fieldset legend {
+		font-size: var(--password-settings-legend-font-size-large);
+	}
+	.button {
+		font-size: var(--button-font-size-large);
+	}
+	.setting {
+		font-size: var(--password-setting-font-size-large);
+	}
+}

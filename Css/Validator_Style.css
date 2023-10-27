@@ -1,0 +1,94 @@
+.validator-form .validator-element {
+	position: relative;
+	right: 12px;
+}
+
+.validator-form .validator-element input {
+	min-width: 300px;
+	padding: 10px;
+	font-size: var(--validator-input-font-size);
+	border: 1px solid var(--border-color);
+	border-radius: 50px;
+	outline: none;
+	text-indent: 10px;
+	letter-spacing: 1px;
+}
+
+.validator-form .validator-element .toggle-password {
+	position: absolute;
+	width: 40px;
+	color: var(--toggle-icon-color);
+	top: 2px;
+	right: -40px;
+	text-align: center;
+	line-height: 35px;
+	font-size: var(--validator-toggle-icon-font-size);
+	cursor: pointer;
+}
+
+.validator-form .validator-element .toggle-password.active i.fa-eye {
+	display: none;
+}
+
+.validator-form .validator-element .toggle-password.active i.fa-eye-slash {
+	display: inline;
+}
+
+.validator-form .validator-element .toggle-password i.fa-eye-slash {
+	display: none;
+}
+
+.validator-form .validator-element .password-rules {
+	position: relative;
+	left: 50px;
+	transform: translateX(-13%);
+	width: 90%;
+	height: 0px;
+	color: var(--validator-text-color);
+	background: var(--input-bg-color);
+	border-radius: var(--border-radius);
+	margin-top: 10px;
+	overflow: hidden;
+	opacity: 0;
+	transition: height var(--transition-speed) ease-in-out, opacity var(--transition-speed) ease-in-out;
+	z-index: 1;
+}
+
+.validator-form .validator-element .password-rules.active {
+	opacity: 1;
+	padding: 10px;
+	height: 150px;
+}
+
+.validator-form .validator-element .password-rules fieldset > div {
+	margin: 15px 10px;
+	font-weight: 600;
+	color: var(--error-color);
+}
+
+.validator-form .validator-element .password-rules fieldset > div.active {
+	color: var(--success-color);
+}
+
+/* Styles for the fieldset element */
+#password_rules fieldset {
+	border: none;
+	border-radius: var(--border-radius);
+	font-size: var(--validator-rules-font-size);
+}
+
+#password_rules legend {
+	display: none;
+}
+
+@media screen and (min-width: 600px) {
+	.validator-form .validator-element input {
+		font-size: var(--validator-input-font-size-large);
+	}
+	.validator-form .validator-element .toggle-password {
+		font-size: var(--validator-toggle-icon-font-size-large);
+	}
+	#password_rules fieldset {
+		font-size: var(--validator-rules-font-size-large);
+	}
+}
