@@ -9,7 +9,8 @@
 	--highlight-color: #fa8719;
 	--border-highlight-color: #ff6a00;
 	--dark-border-color: #0174ff;
-	--light-shadow: 0 16px 22px -17px #257be6;
+	--light-shadow: 0 16px 22px -11px #257be6;
+	--light-shadow-white: 0 16px 22px -11px #f5f5f5;
 	--panel-bg-color: #f5f5f5;
 	--border-color: #888;
 	--error-color: red;
@@ -30,6 +31,7 @@
 	--border-radius-small: 5px;
 	--border-radius-circle: 50%;
 	--transition-speed: 0.3s;
+	--transition-speed-slow: 1s;
 	--button-font-size: 0.77rem;
 	--button-font-size-large: 1rem;
 	--result-container-font-size: 1rem;
@@ -55,7 +57,7 @@
 @keyframes rainbow-animation {
 	0% {
 		background-size: var(--rainbow-background-size);
-		background-position: 0% 50%;
+		background-position: 0% 30%;
 	}
 	50% {
 		background-size: var(--rainbow-background-size);

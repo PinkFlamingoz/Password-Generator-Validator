@@ -57,7 +57,7 @@
 .validator-form .validator-element .password-rules.active {
 	opacity: 1;
 	padding: 10px;
-	height: 150px;
+	height: 184px;
 }
 
 .validator-form .validator-element .password-rules fieldset > div {

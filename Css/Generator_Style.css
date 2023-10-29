@@ -7,7 +7,7 @@
 	max-width: 100%;
 	min-width: 370px;
 	box-shadow: none;
-	transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed) ease, background-color var(--transition-speed) ease;
+	transition: box-shadow var(--transition-speed) ease, transform var(--transition-speed-slow) ease, background-color var(--transition-speed-slow) ease;
 	transform: translateY(0);
 }
 
@@ -44,7 +44,7 @@
 }
 
 #password_settings_form fieldset {
-	border: 2px solid var(--main-bg-color);
+	border: 3px solid var(--main-bg-color);
 	border-radius: var(--border-radius);
 	padding: 20px;
 	margin-bottom: 20px;

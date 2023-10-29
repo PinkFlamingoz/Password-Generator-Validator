@@ -100,6 +100,7 @@
     box-shadow: var(--links-box-shadow-hover);
     border-color: transparent;
 }
+
 #confetti-canvas {
     position: fixed;
     top: 0;
@@ -107,10 +108,8 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 9999; /* Adjust z-index if necessary */
+    z-index: 9999; 
 }
-
-
 
 .floating-button {
 	border-radius: var(--border-radius-large);
@@ -120,14 +119,18 @@
 	color: var(--main-text-color);
 	cursor: pointer;
 	font-size: var(--links-button-font-size);
+	font-weight: 500;
+	letter-spacing: 1px;
 	padding: 12px 20px;
 	position: fixed;
 	bottom: 20px;
 	z-index: 0;
 	transform: translateX(-50%);
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .floating-button:hover {
 	background-color: var(--main-text-color);
 	color: var(--dark-border-color);
+	box-shadow: var(--light-shadow-white);
 }
