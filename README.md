@@ -11,4 +11,4 @@ An application for generating and testing passwords.
  - Testing the password.
  
  ## How the app looks
-![alt text](https://github.com/PinkFlamingoz/Password-Generator-Validator/blob/main/ezgif-2-2ee21c51e0.gif)
+![alt text](https://github.com/PinkFlamingoz/Password-Generator-Validator/blob/main/pgv.gif)
