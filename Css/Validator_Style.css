@@ -70,7 +70,6 @@
 	color: var(--success-color);
 }
 
-/* Styles for the fieldset element */
 #password_rules fieldset {
 	border: none;
 	border-radius: var(--border-radius);
