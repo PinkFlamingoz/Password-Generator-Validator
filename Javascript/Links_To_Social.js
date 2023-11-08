@@ -1,6 +1,6 @@
 // Constants representing various selectors for HTML elements.
-const FLOATING_BUTTON_CLASS = '.floating-button'; //----------------------------------- Selector for the floating action button.
-const CLOSE_BUTTON_CLASS = '.close-button'; //----------------------------------------- Selector for the close button.
+const FLOATING_BUTTON_CLASS = '.floating-button'; //-------------------------------- Selector for the floating action button.
+const CLOSE_BUTTON_CLASS = '.close-button'; //-------------------------------------- Selector for the close button.
 const SOCIAL_PANEL_CONTAINER_CLASS = '.social-panel-container'; //------------------ Selector for the social panel container.
 const HOVER_ELEMENTS_SELECTOR = '.social-panel ul li a, .social-panel .fa-heart'; // Selector for elements that trigger effects on hover.
 
